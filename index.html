@@ -229,8 +229,10 @@
       .hero-visual { min-height: 490px; }
       .hero-card { inset: 24px 10px 0 24px; }
       .principles { grid-template-columns: 1fr; }
-      .diagram { grid-template-columns: 1fr; }
-      .diagram-arrow { transform: rotate(90deg); }
+      .diagram { grid-template-columns: 1fr; row-gap: 10px; }
+      .diagram-arrow { position: relative; width: 34px; height: 48px; margin: -2px auto; font-size: 0; transform: none; }
+      .diagram-arrow::before { content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 31px; background: rgba(239,120,95,.48); transform: translateX(-50%); }
+      .diagram-arrow::after { content: "↓"; position: absolute; left: 50%; bottom: -3px; transform: translateX(-50%); color: var(--coral); font-size: 1.5rem; line-height: 1; }
       .shot, .setup-grid { grid-template-columns: 1fr; }
       .shot:nth-child(even) .shot-image { order: 0; }
       .shot-image { min-height: 340px; }
