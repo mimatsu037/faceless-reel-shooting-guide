@@ -51,6 +51,20 @@
     a { color: inherit; }
     button, a { -webkit-tap-highlight-color: transparent; }
 
+    /* Japanese typography: keep phrases intact and avoid awkward punctuation at line starts. */
+    :where(h1, h2, h3, p, li, .button, .shot-label, .kicker) {
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+    @supports (word-break: auto-phrase) {
+      :where(h1, h2, h3, p, li, .button, .shot-label, .kicker) {
+        word-break: auto-phrase;
+      }
+    }
+    h1, h2, h3 { text-wrap: balance; }
+    p, li { text-wrap: pretty; }
+
     .skip-link {
       position: fixed; left: 16px; top: -80px; z-index: 100;
       padding: 10px 16px; border-radius: 999px; background: var(--ink); color: white;
