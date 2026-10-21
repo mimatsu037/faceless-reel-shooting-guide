@@ -127,6 +127,10 @@
     .kicker { margin: 0 0 10px; color: var(--coral-dark); font-size: .78rem; letter-spacing: .14em; font-weight: 900; }
     h2 { margin: 0; font-size: clamp(2rem, 4.5vw, 3.7rem); line-height: 1.2; letter-spacing: -.035em; }
     .section-head > p:last-child { margin: 18px 0 0; color: var(--muted); }
+    .gear-intro { padding: 24px 26px; border: 1px solid var(--line); border-left: 5px solid var(--coral); border-radius: 20px; background: var(--paper); box-shadow: 0 14px 36px rgba(63,47,35,.07); }
+    .gear-intro .text-punch { display: block; margin-bottom: 10px; color: var(--coral-dark); font-size: 1.15em; font-weight: 900; }
+    .gear-intro .text-highlight { padding: 0 .08em; color: var(--ink); font-weight: 900; background: linear-gradient(transparent 60%, rgba(240,201,107,.58) 60%); }
+    .gear-intro .text-closing { display: block; margin-top: 12px; color: var(--sage-dark); font-weight: 900; }
 
     .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .principle {
@@ -257,6 +261,7 @@
       .watch { border-radius: 28px 28px 0 0; }
       .watch h2 { font-size: clamp(1.25rem, 6.25vw, 1.8rem); line-height: 1.35; letter-spacing: -.045em; }
       .watch-line { white-space: nowrap; }
+      .gear-intro { padding: 20px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -372,7 +377,7 @@
       <div class="section-head reveal">
         <p class="kicker">NO SPECIAL GEAR</p>
         <h2>特別な機材がなくても、<br>撮影は始められる</h2>
-        <p>撮影を始めるために、高価な三脚を買う必要はありません。高さを出したいときは段ボールや本を重ね、スマホはティッシュ箱や空き箱を支えにして固定できます。もっと安定させたい場合は、100円ショップのスマホスタンドを使うのもおすすめ。最初から完璧な機材をそろえず、今あるものでまず1本撮ってみましょう。</p>
+        <p class="gear-intro"><strong class="text-punch">高価な三脚を買う必要はありません。</strong>高さを出したいときは<strong class="text-highlight">段ボールや本</strong>を重ね、スマホは<strong class="text-highlight">ティッシュ箱や空き箱</strong>を支えにして固定できます。もっと安定させたい場合は、<strong class="text-highlight">100円ショップのスマホスタンド</strong>を使うのもおすすめ。<span class="text-closing">最初から完璧な機材をそろえず、今あるものでまず1本撮ってみましょう。</span></p>
       </div>
       <div class="setup-grid reveal">
         <div class="setup-image"><img src="assets/09-phone-stand.jpg" alt="段ボール箱を重ねてスマホの高さを調整している様子"></div>
