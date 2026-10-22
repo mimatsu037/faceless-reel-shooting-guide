@@ -138,6 +138,7 @@
       font-size: .9rem; line-height: 1.6;
     }
     .hero-note strong { display: block; color: var(--coral-dark); font-size: 1.1rem; }
+    .basics-title span { display: block; }
 
     .section { width: min(1060px, calc(100% - 32px)); margin: 0 auto; padding: 92px 0; }
     .section-head { max-width: 730px; margin-bottom: 44px; }
@@ -268,7 +269,10 @@
       .hero-visual { min-height: 395px; }
       .hero-card { inset: 18px 0 0 16px; border-radius: 26px; }
       .hero-sticker { width: 100px; height: 100px; font-size: .78rem; }
-      .hero-note { max-width: 210px; bottom: -4px; }
+      .hero-note { max-width: 250px; padding: 16px 18px; bottom: -4px; }
+      .hero-note strong { font-size: 1rem; white-space: nowrap; }
+      .basics-title { font-size: clamp(1.55rem, 6.6vw, 1.75rem); letter-spacing: -.05em; }
+      .basics-title span { white-space: nowrap; }
       .section { padding: 68px 0; }
       .storyboard, .checklist { grid-template-columns: 1fr; }
       .story-cell::after { right: 50%; top: auto; bottom: -24px; transform: translateX(50%); display: block !important; }
@@ -278,7 +282,6 @@
       .watch { border-radius: 28px 28px 0 0; }
       .watch h2 { font-size: clamp(1.25rem, 6.25vw, 1.8rem); line-height: 1.35; letter-spacing: -.045em; }
       .watch-line { white-space: nowrap; }
-      .jp-phrase { display: block; }
       .gear-intro { padding: 20px; }
     }
 
@@ -319,7 +322,7 @@
     <section class="section reveal" id="basics">
       <div class="section-head">
         <p class="kicker">THE BASIC IDEA</p>
-        <h2>顔の代わりに、<br>「動作」と「空気感」を映す</h2>
+        <h2 class="basics-title"><span>顔の代わりに、</span><span>「動作」と「空気感」を映す</span></h2>
         <p><span class="jp-phrase">顔を隠すことだけを考えると、</span><span class="jp-phrase">映像が窮屈になりがち。</span><span class="jp-phrase">主役を「顔」ではなく、</span><span class="jp-phrase">「手・背中・道具・動き」にすると、</span><span class="jp-phrase">自然で伝わる素材になります。</span></p>
       </div>
       <div class="principles">
