@@ -149,6 +149,38 @@
     .gear-intro .text-punch { display: block; margin-bottom: 10px; color: var(--coral-dark); font-size: 1.15em; font-weight: 900; }
     .gear-intro .text-highlight { padding: 0 .08em; color: var(--ink); font-weight: 900; background: linear-gradient(transparent 60%, rgba(240,201,107,.58) 60%); }
     .gear-intro .text-closing { display: block; margin-top: 12px; color: var(--sage-dark); font-weight: 900; }
+    .gear-map {
+      margin: -8px 0 34px; padding: clamp(24px, 4.5vw, 44px); border-radius: 32px;
+      color: white; background:
+        radial-gradient(circle at 10% 0%, rgba(239,120,95,.22), transparent 16rem),
+        radial-gradient(circle at 100% 100%, rgba(156,175,155,.2), transparent 18rem),
+        var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .gear-map-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+    .gear-map-head p { margin: 0; color: var(--lemon); font-size: .76rem; font-weight: 900; letter-spacing: .13em; }
+    .gear-map-head h3 { margin: 3px 0 0; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.35; }
+    .gear-map-note {
+      flex: 0 0 auto; padding: 8px 14px; border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px; color: #e7e1d9; font-size: .78rem; font-weight: 700;
+    }
+    .gear-steps { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; gap: 12px; align-items: stretch; }
+    .gear-card {
+      min-width: 0; padding: 22px 16px 20px; border-radius: 24px; text-align: center;
+      color: var(--ink); background: rgba(255,253,248,.96); border: 1px solid rgba(255,255,255,.2);
+    }
+    .gear-art {
+      width: 124px; height: 106px; margin: 0 auto 12px; display: grid; place-items: center;
+      border-radius: 22px; background: #f6efe5;
+    }
+    .gear-card:nth-child(3) .gear-art { background: #edf2e9; }
+    .gear-card:nth-child(5) .gear-art { background: #fff0e9; }
+    .gear-art svg { width: 102px; height: 88px; overflow: visible; }
+    .gear-card b { display: block; color: var(--coral-dark); font-size: .72rem; letter-spacing: .1em; }
+    .gear-card strong { display: block; margin-top: 4px; font-size: 1.05rem; line-height: 1.45; }
+    .gear-card small { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; line-height: 1.55; }
+    .gear-arrow { display: grid; place-items: center; color: var(--lemon); }
+    .gear-arrow svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }
 
     .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .principle {
@@ -251,6 +283,9 @@
       .hero-visual { min-height: 490px; }
       .hero-card { inset: 24px 10px 0 24px; }
       .principles { grid-template-columns: 1fr; }
+      .gear-steps { grid-template-columns: 1fr; gap: 10px; }
+      .gear-arrow { height: 34px; }
+      .gear-arrow svg { transform: rotate(90deg); }
       .diagram { grid-template-columns: 1fr; row-gap: 10px; }
       .diagram-arrow { position: relative; width: 34px; height: 48px; margin: -2px auto; font-size: 0; transform: none; }
       .diagram-arrow::before { content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 31px; background: rgba(239,120,95,.48); transform: translateX(-50%); }
@@ -283,6 +318,11 @@
       .watch h2 { font-size: clamp(1.25rem, 6.25vw, 1.8rem); line-height: 1.35; letter-spacing: -.045em; }
       .watch-line { white-space: nowrap; }
       .gear-intro { padding: 20px; }
+      .gear-map { margin-top: -12px; padding: 24px 18px; border-radius: 26px; }
+      .gear-map-head { display: block; margin-bottom: 20px; text-align: center; }
+      .gear-map-note { display: inline-block; margin-top: 12px; }
+      .gear-card { padding: 20px 16px; }
+      .gear-art { width: 136px; height: 102px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -399,6 +439,70 @@
         <p class="kicker">NO SPECIAL GEAR</p>
         <h2>特別な機材がなくても、<br>撮影は始められる</h2>
         <p class="gear-intro"><span class="jp-phrase"><strong class="text-punch">高価な三脚は、必要ありません。</strong></span><span class="jp-phrase">高さを出したいときは、</span><span class="jp-phrase"><strong class="text-highlight">段ボールや本</strong>を重ねます。</span><span class="jp-phrase">スマホの固定には、</span><span class="jp-phrase"><strong class="text-highlight">ティッシュ箱や空き箱</strong>を使えます。</span><span class="jp-phrase">もっと安定させたい場合は、</span><span class="jp-phrase">100円ショップなら、</span><span class="jp-phrase"><strong class="text-highlight">スマホスタンド</strong>も手に入ります。</span><span class="text-closing"><span class="jp-phrase">最初から完璧な機材をそろえず、</span><span class="jp-phrase">今あるもので、</span><span class="jp-phrase">まず1本撮ってみましょう。</span></span></p>
+      </div>
+      <div class="gear-map reveal" aria-label="家にある物から100円ショップのスタンドまで、スマホを固定する3つの方法">
+        <div class="gear-map-head">
+          <div>
+            <p>USE WHAT YOU HAVE</p>
+            <h3>固定方法は、この3パターン</h3>
+          </div>
+          <span class="gear-map-note">今あるものでOK</span>
+        </div>
+        <div class="gear-steps">
+          <div class="gear-card">
+            <div class="gear-art">
+              <svg viewBox="0 0 120 96" aria-hidden="true">
+                <g fill="none" stroke="#2c2926" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+                  <rect x="46" y="6" width="28" height="46" rx="5" fill="#fffdf8"/>
+                  <circle cx="60" cy="45" r="1.6" fill="#ef785f" stroke="none"/>
+                  <path d="M21 55h73v15H21z" fill="#f0c96b"/>
+                  <path d="M30 70h69v17H30z" fill="#ef785f" opacity=".82"/>
+                  <path d="M34 62h13M69 78h20"/>
+                </g>
+              </svg>
+            </div>
+            <b>HEIGHT</b>
+            <strong>高さを出す</strong>
+            <small>段ボール・本を重ねる</small>
+          </div>
+          <div class="gear-arrow" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M5 16h21M19 9l7 7-7 7"/></svg>
+          </div>
+          <div class="gear-card">
+            <div class="gear-art">
+              <svg viewBox="0 0 120 96" aria-hidden="true">
+                <g fill="none" stroke="#2c2926" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+                  <path d="M16 49h65l9 34H22z" fill="#9caf9b"/>
+                  <path d="M31 49c1-12 10-18 19-7 4-14 15-14 19 7" fill="#fffdf8"/>
+                  <rect x="78" y="10" width="26" height="50" rx="5" fill="#fffdf8"/>
+                  <path d="M80 58l-9 16"/>
+                  <circle cx="91" cy="53" r="1.6" fill="#ef785f" stroke="none"/>
+                </g>
+              </svg>
+            </div>
+            <b>SUPPORT</b>
+            <strong>スマホを固定</strong>
+            <small>ティッシュ箱・空き箱を使う</small>
+          </div>
+          <div class="gear-arrow" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M5 16h21M19 9l7 7-7 7"/></svg>
+          </div>
+          <div class="gear-card">
+            <div class="gear-art">
+              <svg viewBox="0 0 120 96" aria-hidden="true">
+                <g fill="none" stroke="#2c2926" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+                  <rect x="43" y="6" width="34" height="48" rx="6" fill="#fffdf8"/>
+                  <circle cx="60" cy="47" r="1.6" fill="#ef785f" stroke="none"/>
+                  <path d="M60 54v12M46 66h28M51 66 39 89M69 66l12 23M60 66v23"/>
+                  <path d="M87 30h17M96 21v18" stroke="#ef785f"/>
+                </g>
+              </svg>
+            </div>
+            <b>STABLE</b>
+            <strong>もっと安定</strong>
+            <small>100均のスタンドを使う</small>
+          </div>
+        </div>
       </div>
       <div class="setup-grid reveal">
         <div class="setup-image"><img src="assets/09-phone-stand.jpg" alt="段ボール箱を重ねてスマホの高さを調整している様子"></div>
